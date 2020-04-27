@@ -1,0 +1,24 @@
+<div class="container-fluid" id="contain">
+    <h4>Create your ShortURL</h4>
+
+    
+    <form [formGroup]="urlForm" (submit)="sendData()">
+        <div class="row">
+            <div class="col-lg-8">
+               
+                <input type="text" formControlName="url" class="form-control">
+            </div>
+        </div>
+                
+                <div class="row" id="sb">
+                    <div class="col-lg-2">
+
+                        <input type="submit" value="Submit" class="btn btn-primary  form-control">
+                    </div>
+                </div>
+            
+            
+       
+    </form>
+    {{urlForm.valid}}
+</div>

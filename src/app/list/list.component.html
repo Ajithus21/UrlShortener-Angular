@@ -1,0 +1,23 @@
+<div class="container">
+    
+    <table class="table">
+        <thead>
+           
+            <tr>
+                <th>ShortUrl</th>
+                <th>LongUrl</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let url of urlList">
+                <a [href]="url.long" target="blank">
+                    <td>{{url.short}}</td>
+                </a>
+                
+                <td>{{url.long}}</td>
+                <hr>
+            </tr>
+        </tbody>
+    </table>
+</div>

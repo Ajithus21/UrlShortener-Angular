@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 export class ProductService {
 	constructor(private http: HttpClient) {}
 	postdata(val): Observable<any> {
-		return this.http.post('http://localhost:3000', val);
+		return this.http.post('https://ajith-url-shortener.herokuapp.com/', val);
 	}
 	getdata(): Observable<any> {
-		return this.http.get('http://localhost:3000/url');
+		return this.http.get('https://ajith-url-shortener.herokuapp.com/url');
 	}
 }

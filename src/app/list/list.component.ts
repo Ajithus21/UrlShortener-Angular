@@ -10,10 +10,18 @@ import { Router } from '@angular/router';
 export class ListComponent implements OnInit {
 	urlList;
 	constructor(private urlService: ProductService, private router: Router) {
+		// this.urlService.getdata().subscribe((data) => {
+		// 	this.urlList = data;
+		// });
+	}
+
+	ngOnInit(): void {
 		this.urlService.getdata().subscribe((data) => {
 			this.urlList = data;
 		});
 	}
 
-	ngOnInit(): void {}
+	navigateUrl() {
+		this.router.navigate([ '/' ]);
+	}
 }
